@@ -40,7 +40,6 @@ p {
     width: 100%;
 
     background: rgba(7, 17, 31, 0.94);
-
     backdrop-filter: blur(10px);
 
     border-bottom: 1px solid #1c2b3d;
@@ -51,10 +50,9 @@ p {
 .nav-container {
     width: 90%;
     max-width: 1200px;
+    min-height: 70px;
 
     margin: auto;
-
-    min-height: 70px;
 
     display: flex;
     align-items: center;
@@ -79,7 +77,6 @@ nav {
 nav a {
     font-size: 14px;
     color: #9eacbd;
-
     transition: 0.3s;
 }
 
@@ -156,11 +153,6 @@ nav a:hover {
     margin-bottom: 35px;
 }
 
-
-/* =====================================================
-   HERO BUTTONS
-===================================================== */
-
 .hero-buttons {
     display: flex;
 
@@ -175,18 +167,18 @@ nav a:hover {
 ===================================================== */
 
 .profile-container {
-    min-width: 320px;
+    min-width: 250px;
 
     text-align: center;
 }
 
 .profile-ring {
-    width: 290px;
-    height: 290px;
+    width: 220px;
+    height: 220px;
 
     margin: auto;
 
-    padding: 7px;
+    padding: 6px;
 
     border-radius: 50%;
 
@@ -197,7 +189,7 @@ nav a:hover {
     );
 
     box-shadow:
-        0 0 45px rgba(0, 217, 181, 0.15);
+        0 0 40px rgba(0, 217, 181, 0.15);
 }
 
 .profile-ring img {
@@ -208,17 +200,17 @@ nav a:hover {
 
     border-radius: 50%;
 
-    border: 5px solid #07111f;
+    border: 4px solid #07111f;
 
     display: block;
 }
 
 .profile-label {
-    margin-top: 18px;
+    margin-top: 15px;
 
     color: #00d9b5;
 
-    font-size: 12px;
+    font-size: 11px;
 
     letter-spacing: 2px;
 
@@ -241,7 +233,6 @@ nav a:hover {
     border-radius: 5px;
 
     font-size: 14px;
-
     font-weight: bold;
 
     transition: 0.3s;
@@ -309,7 +300,6 @@ nav a:hover {
     color: #00d9b5;
 
     font-size: 13px;
-
     font-weight: bold;
 
     letter-spacing: 2px;
@@ -609,11 +599,6 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
-
-/* =====================================================
-   PROJECT TAGS
-===================================================== */
-
 .project-tags {
     display: flex;
 
@@ -636,11 +621,6 @@ nav a:hover {
     color: #8fa5b8;
 }
 
-
-/* =====================================================
-   PROJECT LINKS
-===================================================== */
-
 .project-link {
     display: inline-flex;
 
@@ -654,8 +634,6 @@ nav a:hover {
 
     font-weight: bold;
 
-    border-bottom: 1px solid transparent;
-
     transition: 0.3s;
 }
 
@@ -665,8 +643,6 @@ nav a:hover {
 
 .project-link:hover {
     color: #ffffff;
-
-    border-bottom-color: #00d9b5;
 }
 
 .project-link:hover span {
@@ -724,9 +700,9 @@ nav a:hover {
 ===================================================== */
 
 .contact-section {
-    padding: 120px 20px;
+    width: 100%;
 
-    text-align: center;
+    padding: 120px 20px;
 
     background:
         linear-gradient(
@@ -741,7 +717,9 @@ nav a:hover {
 
     max-width: 700px;
 
-    margin: auto;
+    margin: 0 auto;
+
+    text-align: center;
 }
 
 .contact-section h2 {
@@ -753,7 +731,9 @@ nav a:hover {
 }
 
 .contact-description {
-    margin-bottom: 30px;
+    max-width: 650px;
+
+    margin: 0 auto 30px;
 
     font-size: 16px;
 }
@@ -776,11 +756,13 @@ nav a:hover {
 .form-group {
     width: 100%;
 
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
 }
 
 .form-group label {
     display: block;
+
+    width: 100%;
 
     margin-bottom: 7px;
 
@@ -796,6 +778,10 @@ nav a:hover {
     display: block;
 
     width: 100%;
+
+    max-width: 100%;
+
+    margin: 0;
 
     padding: 13px 15px;
 
@@ -814,6 +800,8 @@ nav a:hover {
     outline: none;
 
     transition: 0.3s;
+
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -825,9 +813,9 @@ nav a:hover {
 }
 
 .form-group textarea {
-    resize: vertical;
-
     min-height: 150px;
+
+    resize: vertical;
 }
 
 .form-group input::placeholder,
@@ -840,20 +828,27 @@ nav a:hover {
    SEND MESSAGE BUTTON
 ===================================================== */
 
-.send-button {
-    display: block !important;
+.contact-form .send-button {
+    display: flex;
 
-    width: 100% !important;
+    align-items: center;
+    justify-content: center;
 
-    margin: 10px 0 0 0 !important;
+    width: 100%;
 
-    padding: 14px 25px !important;
+    height: 48px;
+
+    margin: 10px 0 0 0;
+
+    padding: 0 20px;
 
     border: none;
 
     border-radius: 5px;
 
-    text-align: center;
+    background: #00d9b5;
+
+    color: #06111e;
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -861,7 +856,19 @@ nav a:hover {
 
     font-weight: bold;
 
+    text-align: center;
+
     cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition: 0.3s;
+}
+
+.contact-form .send-button:hover {
+    background: #ffffff;
+
+    transform: translateY(-2px);
 }
 
 
@@ -902,7 +909,7 @@ footer p {
 
 
 /* =====================================================
-   RESPONSIVE — TABLET
+   TABLET
 ===================================================== */
 
 @media (max-width: 1000px) {
@@ -924,18 +931,17 @@ footer p {
     .profile-container {
         min-width: auto;
 
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
 /* =====================================================
-   RESPONSIVE — SMALL TABLET
+   SMALL TABLET
 ===================================================== */
 
 @media (max-width: 800px) {
@@ -955,12 +961,11 @@ footer p {
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
 }
 
 
 /* =====================================================
-   RESPONSIVE — MOBILE
+   MOBILE
 ===================================================== */
 
 @media (max-width: 600px) {
@@ -997,9 +1002,15 @@ footer p {
         font-size: 15px;
     }
 
+    /* Smaller profile on mobile */
+
     .profile-ring {
-        width: 230px;
-        height: 230px;
+        width: 190px;
+        height: 190px;
+    }
+
+    .profile-container {
+        min-width: 0;
     }
 
     .section {
@@ -1028,10 +1039,13 @@ footer p {
 
     .contact-form {
         width: 100%;
+        max-width: 100%;
     }
 
-    .send-button {
-        width: 100% !important;
+    .form-group input,
+    .form-group textarea,
+    .contact-form .send-button {
+        width: 100%;
+        max-width: 100%;
     }
-
 }
