@@ -39,7 +39,7 @@ p {
     left: 0;
     width: 100%;
 
-    background: rgba(7, 17, 31, 0.92);
+    background: rgba(7, 17, 31, 0.94);
 
     backdrop-filter: blur(10px);
 
@@ -54,7 +54,7 @@ p {
 
     margin: auto;
 
-    height: 70px;
+    min-height: 70px;
 
     display: flex;
     align-items: center;
@@ -110,14 +110,13 @@ nav a:hover {
 }
 
 .hero-content {
-    max-width: 720px;
+    max-width: 700px;
 }
 
 .eyebrow {
     color: #00d9b5;
 
     font-size: 13px;
-
     font-weight: bold;
 
     letter-spacing: 2px;
@@ -157,11 +156,73 @@ nav a:hover {
     margin-bottom: 35px;
 }
 
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
 .hero-buttons {
     display: flex;
+
     gap: 15px;
 
     flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-container {
+    min-width: 320px;
+
+    text-align: center;
+}
+
+.profile-ring {
+    width: 290px;
+    height: 290px;
+
+    margin: auto;
+
+    padding: 7px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #00d9b5,
+        #123f55
+    );
+
+    box-shadow:
+        0 0 45px rgba(0, 217, 181, 0.15);
+}
+
+.profile-ring img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #07111f;
+
+    display: block;
+}
+
+.profile-label {
+    margin-top: 18px;
+
+    color: #00d9b5;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
 }
 
 
@@ -170,7 +231,10 @@ nav a:hover {
 ===================================================== */
 
 .btn {
-    display: inline-block;
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
 
     padding: 13px 25px;
 
@@ -181,6 +245,8 @@ nav a:hover {
     font-weight: bold;
 
     transition: 0.3s;
+
+    cursor: pointer;
 }
 
 .btn.primary {
@@ -199,6 +265,8 @@ nav a:hover {
     border: 1px solid #33475c;
 
     color: #d9e2ec;
+
+    background: transparent;
 }
 
 .btn.secondary:hover {
@@ -207,86 +275,6 @@ nav a:hover {
     color: #00d9b5;
 
     transform: translateY(-3px);
-}
-
-
-/* =====================================================
-   HERO CHIP CARD
-===================================================== */
-
-.hero-card {
-    width: 300px;
-    min-width: 300px;
-
-    height: 300px;
-
-    border: 1px solid #1f3b4a;
-
-    background:
-        linear-gradient(
-            145deg,
-            #0d2130,
-            #08131f
-        );
-
-    border-radius: 15px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.35);
-}
-
-.chip-icon {
-    font-size: 80px;
-
-    color: #00d9b5;
-
-    margin-bottom: 15px;
-}
-
-.hero-card p {
-    font-size: 11px;
-
-    letter-spacing: 3px;
-
-    color: #00d9b5;
-}
-
-.hero-card h3 {
-    font-size: 27px;
-
-    margin: 5px 0 15px;
-}
-
-.hero-card small {
-    color: #7f91a5;
-}
-
-.chip-lines {
-    display: flex;
-
-    gap: 5px;
-
-    margin-bottom: 15px;
-}
-
-.chip-lines span {
-    display: block;
-
-    width: 30px;
-
-    height: 3px;
-
-    background: #00d9b5;
 }
 
 
@@ -343,8 +331,7 @@ nav a:hover {
 .about-grid {
     display: grid;
 
-    grid-template-columns:
-        2fr 1fr;
+    grid-template-columns: 2fr 1fr;
 
     gap: 70px;
 }
@@ -387,8 +374,7 @@ nav a:hover {
 .skills-grid {
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
 
@@ -480,7 +466,6 @@ nav a:hover {
     left: 8px;
 
     top: 0;
-
     bottom: 0;
 
     width: 2px;
@@ -500,11 +485,9 @@ nav a:hover {
     position: absolute;
 
     left: 0;
-
     top: 7px;
 
     width: 18px;
-
     height: 18px;
 
     border-radius: 50%;
@@ -558,8 +541,7 @@ nav a:hover {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
     gap: 25px;
 }
@@ -590,7 +572,6 @@ nav a:hover {
     position: absolute;
 
     top: 15px;
-
     right: 20px;
 
     font-size: 35px;
@@ -628,12 +609,19 @@ nav a:hover {
     margin-bottom: 25px;
 }
 
+
+/* =====================================================
+   PROJECT TAGS
+===================================================== */
+
 .project-tags {
     display: flex;
 
     flex-wrap: wrap;
 
     gap: 8px;
+
+    margin-bottom: 25px;
 }
 
 .project-tags span {
@@ -646,6 +634,43 @@ nav a:hover {
     background: #102839;
 
     color: #8fa5b8;
+}
+
+
+/* =====================================================
+   PROJECT LINKS
+===================================================== */
+
+.project-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #00d9b5;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    border-bottom: 1px solid transparent;
+
+    transition: 0.3s;
+}
+
+.project-link span {
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    color: #ffffff;
+
+    border-bottom-color: #00d9b5;
+}
+
+.project-link:hover span {
+    transform: translateX(5px);
 }
 
 
@@ -695,7 +720,7 @@ nav a:hover {
 
 
 /* =====================================================
-   CONTACT
+   CONTACT SECTION
 ===================================================== */
 
 .contact-section {
@@ -712,6 +737,8 @@ nav a:hover {
 }
 
 .contact-container {
+    width: 100%;
+
     max-width: 700px;
 
     margin: auto;
@@ -725,20 +752,131 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-.contact-section > .contact-container > p:not(.section-number) {
+.contact-description {
     margin-bottom: 30px;
 
     font-size: 16px;
 }
 
-.contact-buttons {
-    display: flex;
 
-    justify-content: center;
+/* =====================================================
+   CONTACT FORM
+===================================================== */
 
-    gap: 15px;
+.contact-form {
+    width: 100%;
 
-    flex-wrap: wrap;
+    max-width: 650px;
+
+    margin: 35px auto 0;
+
+    text-align: left;
+}
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #d9e2ec;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #294154;
+
+    border-radius: 5px;
+
+    background: #081523;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #00d9b5;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 217, 181, 0.08);
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 150px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #607386;
+}
+
+
+/* =====================================================
+   SEND MESSAGE BUTTON
+===================================================== */
+
+.send-button {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 10px 0 0 0 !important;
+
+    padding: 14px 25px !important;
+
+    border: none;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   SOCIAL LINKS
+===================================================== */
+
+.social-links {
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.social-links .btn {
+    display: inline-flex;
 }
 
 
@@ -764,10 +902,43 @@ footer p {
 
 
 /* =====================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE — TABLET
 ===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        justify-content: center;
+
+        padding-top: 130px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-container {
+        min-width: auto;
+
+        margin-top: 30px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE — SMALL TABLET
+===================================================== */
+
+@media (max-width: 800px) {
 
     nav {
         gap: 12px;
@@ -777,39 +948,20 @@ footer p {
         font-size: 12px;
     }
 
-    .hero {
-        flex-direction: column;
-
-        justify-content: center;
-
-        text-align: center;
-
-        padding-top: 130px;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .hero-card {
-        width: 250px;
-
-        min-width: 250px;
-
-        height: 250px;
-    }
-
     .about-grid {
         grid-template-columns: 1fr;
     }
 
-    .skills-grid {
-        grid-template-columns:
-            repeat(2, 1fr);
+    .projects-grid {
+        grid-template-columns: 1fr;
     }
 
 }
 
+
+/* =====================================================
+   RESPONSIVE — MOBILE
+===================================================== */
 
 @media (max-width: 600px) {
 
@@ -829,12 +981,25 @@ footer p {
         justify-content: center;
     }
 
+    .hero {
+        padding-top: 150px;
+    }
+
     .hero h1 {
         font-size: 45px;
     }
 
     .hero h2 {
         font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .profile-ring {
+        width: 230px;
+        height: 230px;
     }
 
     .section {
@@ -849,16 +1014,24 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
     .education-card {
         grid-template-columns: 1fr;
     }
 
+    .contact-section {
+        padding: 90px 20px;
+    }
+
     .contact-section h2 {
         font-size: 38px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .send-button {
+        width: 100% !important;
     }
 
 }
